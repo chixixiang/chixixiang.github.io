@@ -1,3 +1,6 @@
+.site-meta {
+  background: #0684bd;
+}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1823,7 +1826,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb62d;
+  background: #d778c8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2990,4 +2993,25 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+@font-face {
+  font-family: Zitiming;
+  src: url("/fonts/Zitiming.ttf");
+}
+.site-title {
+  font-size: 40px !important;
+  font-family: 'Zitiming' !important;
+}
+* {
+  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword2.ico"), auto !important;
+}
+:active {
+  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
 }
