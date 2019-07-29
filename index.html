@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/git使用心得（一）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/Git使用心得（一）-0/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行痴">
@@ -271,7 +271,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/29/git使用心得（一）/" itemprop="url">git使用心得（一）</a></h1>
+                <a class="post-title-link" href="/2019/07/29/Git使用心得（一）-0/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -283,7 +283,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-29T15:02:24+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-29T15:46:54+08:00">
                 2019-07-29
               </time>
             
@@ -379,9 +379,7 @@
 <p>HEAD^  表示HEAD 往回数一个位置的commit ：即HEAD^ 表示你要恢复到哪个 commit。因为你要撤销最新的一个commit，所以你需要恢复到它的父 commit，也就是 HEAD^</p>
 </blockquote>
 <h5 id="想丢弃的提交不是最新提交"><a href="#想丢弃的提交不是最新提交" class="headerlink" title="想丢弃的提交不是最新提交"></a>想丢弃的提交不是最新提交</h5><p>假如有一个 commit ，你在刚把它写完的时候并没有觉得它不好，可是在之后又写了几个提交以后，你想撤销了，不是最新的提交，就不能用 reset  –hard 来撤销了。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc74f48c7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
 <p>如果想撤销第二条commit，那么可以使用rebase -i</p>
-<p><img src="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc7ac1154?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
 <p>然后就会跳到 commit 序列的编辑界面，你需要修改这个序列来进行操作。直接删掉这一行就好。pick的直接意思是「选取」，在这个界面的意思就是应用这个 commit。而如果把这一行删掉，那就相当于在 rebase的过程中跳过了这个 commit，从而也就把这个 commit撤销掉了。</p>
 
           
@@ -666,7 +664,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
