@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="其他,">
+  <meta name="keywords" content="开发工具,">
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="使用Hexo+Github 搭建专属博客​                                   春风得意马蹄疾，一日看尽长安花">
-<meta name="keywords" content="其他">
+<meta name="description" content="从远程master检出最新版本的分支以前在使用git开发的习惯是，切换到mater分支，然后新建一个特性开发分支，后来发现一个简单的做法： checkout master12345git checkout mastergit checkout -b new_branch 等同于git checkout -b new_branch origin/master即基于远程master最新创建新的分支 在">
+<meta name="keywords" content="开发工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My First Blog">
-<meta property="og:url" content="http://yoursite.com/2018/11/01/My-First-Blog/index.html">
+<meta property="og:title" content="git使用心得（一）">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/git使用心得（一）/index.html">
 <meta property="og:site_name" content="乐乐熊的小站">
-<meta property="og:description" content="使用Hexo+Github 搭建专属博客​                                   春风得意马蹄疾，一日看尽长安花">
+<meta property="og:description" content="从远程master检出最新版本的分支以前在使用git开发的习惯是，切换到mater分支，然后新建一个特性开发分支，后来发现一个简单的做法： checkout master12345git checkout mastergit checkout -b new_branch 等同于git checkout -b new_branch origin/master即基于远程master最新创建新的分支 在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-03T02:13:00.508Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc74f48c7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc7ac1154?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:updated_time" content="2019-07-29T07:03:43.083Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My First Blog">
-<meta name="twitter:description" content="使用Hexo+Github 搭建专属博客​                                   春风得意马蹄疾，一日看尽长安花">
+<meta name="twitter:title" content="git使用心得（一）">
+<meta name="twitter:description" content="从远程master检出最新版本的分支以前在使用git开发的习惯是，切换到mater分支，然后新建一个特性开发分支，后来发现一个简单的做法： checkout master12345git checkout mastergit checkout -b new_branch 等同于git checkout -b new_branch origin/master即基于远程master最新创建新的分支 在">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc74f48c7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/01/My-First-Blog/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/29/git使用心得（一）/">
 
 
 
 
 
-  <title>My First Blog | 乐乐熊的小站</title>
+  <title>git使用心得（一） | 乐乐熊的小站</title>
   
 
 
@@ -253,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/01/My-First-Blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/29/git使用心得（一）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="行痴">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My First Blog</h1>
+          <h1 class="post-title" itemprop="name headline">git使用心得（一）</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T11:26:14+08:00">
-                2018-11-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-29T15:02:24+08:00">
+                2019-07-29
               </time>
             
 
@@ -292,28 +295,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -375,10 +356,33 @@
       
 
       
-        <h1 id="使用Hexo-Github-搭建专属博客"><a href="#使用Hexo-Github-搭建专属博客" class="headerlink" title="使用Hexo+Github 搭建专属博客"></a>使用Hexo+Github 搭建专属博客</h1><p>​                                 </p>
+        <h5 id="从远程master检出最新版本的分支"><a href="#从远程master检出最新版本的分支" class="headerlink" title="从远程master检出最新版本的分支"></a>从远程master检出最新版本的分支</h5><p>以前在使用git开发的习惯是，切换到mater分支，然后新建一个特性开发分支，后来发现一个简单的做法：</p>
+<figure class="highlight plain"><figcaption><span>checkout master</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b new_branch </span><br><span class="line">等同于</span><br><span class="line">git checkout -b new_branch origin/master</span><br><span class="line">即基于远程master最新创建新的分支</span><br></pre></td></tr></table></figure>
+<p>在本地新建的开发分支上，push到远程的方式不能和maser分支push到远程的方式一样了：</p>
+<figure class="highlight plain"><figcaption><span>push origin </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin feature1</span><br></pre></td></tr></table></figure>
+<p>这里 origin 是远程仓库的别名，是你在 git clone 的时候 Git 自动帮你起的；feature1 是远程仓库中目标 branch 的名字。这两个参数合起来指定了你要 push 到的目标仓库和目标分支，意思是「我要 push 到 origin 这个仓库的 feature1 分支」。</p>
 <blockquote>
-<p>春风得意马蹄疾，一日看尽长安花</p>
+<p>在 Git 中（2.0 及它之后的版本），默认情况下，你用不加参数的 git push 只能上传那些之前从远端 clone 下来或者 pull 下来的分支，而如果需要 push 你本地的自己创建的分支，则需要手动指定目标仓库和目标分支（并且目标分支的名称必须和本地分支完全相同），就像上面这样。</p>
 </blockquote>
+<h5 id="养成删除分支的习惯"><a href="#养成删除分支的习惯" class="headerlink" title="养成删除分支的习惯"></a>养成删除分支的习惯</h5><p>本地分支的代码merge到master，然后push到远程的origin/mater后，便万事大吉了。后来发现分支实在太多了，为了让分支不野蛮增长，将本地及远程的开发分支删除：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -d books</span><br><span class="line">git push origin -d books # 用 -d 参数把远程仓库的 branch 也删了</span><br></pre></td></tr></table></figure>
+<h5 id="关于解决冲突"><a href="#关于解决冲突" class="headerlink" title="关于解决冲突"></a>关于解决冲突</h5><p>merge之后，如何解决冲突？</p>
+<p>手动修改之后 </p>
+<figure class="highlight plain"><figcaption><span>commit -am "注释"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -am &quot;注释&quot;</span><br></pre></td></tr></table></figure>
+<p>在发生冲突后，Git 仓库处于一个「merge 冲突待解决」的中间状态，在这种状态下 commit，Git 就会自动地帮你添加「这是一个 merge commit」的提交信息。</p>
+<p>放弃解决冲突，如何取消merge?</p>
+<figure class="highlight plain"><figcaption><span>merge --abort</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --abort</span><br></pre></td></tr></table></figure>
+<p>输入这行代码，你的 Git 仓库就会回到 merge 前的状态。</p>
+<h5 id="关于丢弃最新提交"><a href="#关于丢弃最新提交" class="headerlink" title="关于丢弃最新提交"></a>关于丢弃最新提交</h5><p>commit之后想撤销本次提交：</p>
+<figure class="highlight plain"><figcaption><span>reset --hard HEAD^</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>HEAD^  表示HEAD 往回数一个位置的commit ：即HEAD^ 表示你要恢复到哪个 commit。因为你要撤销最新的一个commit，所以你需要恢复到它的父 commit，也就是 HEAD^</p>
+</blockquote>
+<h5 id="想丢弃的提交不是最新提交"><a href="#想丢弃的提交不是最新提交" class="headerlink" title="想丢弃的提交不是最新提交"></a>想丢弃的提交不是最新提交</h5><p>假如有一个 commit ，你在刚把它写完的时候并没有觉得它不好，可是在之后又写了几个提交以后，你想撤销了，不是最新的提交，就不能用 reset  –hard 来撤销了。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc74f48c7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+<p>如果想撤销第二条commit，那么可以使用rebase -i</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/11/22/15fe243fc7ac1154?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""></p>
+<p>然后就会跳到 commit 序列的编辑界面，你需要修改这个序列来进行操作。直接删掉这一行就好。pick的直接意思是「选取」，在这个界面的意思就是应用这个 commit。而如果把这一行删掉，那就相当于在 rebase的过程中跳过了这个 commit，从而也就把这个 commit撤销掉了。</p>
 
       
     </div>
@@ -396,7 +400,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/其他/" rel="tag"># 其他</a>
+            <a href="/tags/开发工具/" rel="tag"># 开发工具</a>
           
         </div>
       
@@ -409,15 +413,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/01/My-First-Blog/" rel="next" title="My First Blog">
+                <i class="fa fa-chevron-left"></i> My First Blog
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/29/git使用心得（一）/" rel="prev" title="git使用心得（一）">
-                git使用心得（一） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -551,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用Hexo-Github-搭建专属博客"><span class="nav-number">1.</span> <span class="nav-text">使用Hexo+Github 搭建专属博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#从远程master检出最新版本的分支"><span class="nav-number">1.</span> <span class="nav-text">从远程master检出最新版本的分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#养成删除分支的习惯"><span class="nav-number">2.</span> <span class="nav-text">养成删除分支的习惯</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于解决冲突"><span class="nav-number">3.</span> <span class="nav-text">关于解决冲突</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关于丢弃最新提交"><span class="nav-number">4.</span> <span class="nav-text">关于丢弃最新提交</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#想丢弃的提交不是最新提交"><span class="nav-number">5.</span> <span class="nav-text">想丢弃的提交不是最新提交</span></a></li></ol></div>
             
 
           </div>
