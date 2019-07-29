@@ -379,7 +379,7 @@
         
           
             <h5 id="从远程master检出最新版本的分支"><a href="#从远程master检出最新版本的分支" class="headerlink" title="从远程master检出最新版本的分支"></a>从远程master检出最新版本的分支</h5><p>以前在使用git开发的习惯是，切换到mater分支，然后新建一个特性开发分支，后来发现一个简单的做法：</p>
-<figure class="highlight plain"><figcaption><span>checkout master</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b new_branch </span><br><span class="line">等同于</span><br><span class="line">git checkout -b new_branch origin/master</span><br><span class="line">即基于远程master最新创建新的分支</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>在本地新建的开发分支上，push到远程的方式不能和maser分支push到远程的方式一样了：</p>
 <figure class="highlight plain"><figcaption><span>push origin </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin feature1</span><br></pre></td></tr></table></figure>
 <p>这里 origin 是远程仓库的别名，是你在 git clone 的时候 Git 自动帮你起的；feature1 是远程仓库中目标 branch 的名字。这两个参数合起来指定了你要 push 到的目标仓库和目标分支，意思是「我要 push 到 origin 这个仓库的 feature1 分支」。</p>
@@ -396,7 +396,7 @@
 <figure class="highlight plain"><figcaption><span>merge --abort</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --abort</span><br></pre></td></tr></table></figure>
 <p>输入这行代码，你的 Git 仓库就会回到 merge 前的状态。</p>
 <h5 id="关于丢弃最新提交"><a href="#关于丢弃最新提交" class="headerlink" title="关于丢弃最新提交"></a>关于丢弃最新提交</h5><p>commit之后想撤销本次提交：</p>
-<figure class="highlight plain"><figcaption><span>reset --hard HEAD^</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>reset --hard HEAD^</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reset --hard HEAD^</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>HEAD^  表示HEAD 往回数一个位置的commit ：即HEAD^ 表示你要恢复到哪个 commit。因为你要撤销最新的一个commit，所以你需要恢复到它的父 commit，也就是 HEAD^</p>
 </blockquote>
