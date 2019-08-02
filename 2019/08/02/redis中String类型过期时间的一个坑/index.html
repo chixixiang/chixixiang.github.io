@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="redis,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="行痴个人站，主要涉及后端开发知识共享、技术共同学习等方面">
-<meta property="og:type" content="website">
-<meta property="og:title" content="乐乐熊的小站">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="​    redis的String数据类型有一个需要特别注意的地方是如果一个字符串已经设置了过期时间，然后你调用了 set 方法修改了它的值，它的过期时间会消失！ 1234567891011127.0.0.1:6379&amp;gt; set name chixixiangOK127.0.0.1:6379&amp;gt; expire name 600(integer) 1127.0.0.1:6379&amp;gt; t">
+<meta name="keywords" content="redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis中String类型过期时间的一个坑">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/redis中String类型过期时间的一个坑/index.html">
 <meta property="og:site_name" content="乐乐熊的小站">
-<meta property="og:description" content="行痴个人站，主要涉及后端开发知识共享、技术共同学习等方面">
+<meta property="og:description" content="​    redis的String数据类型有一个需要特别注意的地方是如果一个字符串已经设置了过期时间，然后你调用了 set 方法修改了它的值，它的过期时间会消失！ 1234567891011127.0.0.1:6379&amp;gt; set name chixixiangOK127.0.0.1:6379&amp;gt; expire name 600(integer) 1127.0.0.1:6379&amp;gt; t">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-02T09:31:56.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="乐乐熊的小站">
-<meta name="twitter:description" content="行痴个人站，主要涉及后端开发知识共享、技术共同学习等方面">
+<meta name="twitter:title" content="redis中String类型过期时间的一个坑">
+<meta name="twitter:description" content="​    redis的String数据类型有一个需要特别注意的地方是如果一个字符串已经设置了过期时间，然后你调用了 set 方法修改了它的值，它的过期时间会消失！ 1234567891011127.0.0.1:6379&amp;gt; set name chixixiangOK127.0.0.1:6379&amp;gt; expire name 600(integer) 1127.0.0.1:6379&amp;gt; t">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/02/redis中String类型过期时间的一个坑/">
 
 
 
 
 
-  <title>归档 | 乐乐熊的小站</title>
+  <title>redis中String类型过期时间的一个坑 | 乐乐熊的小站</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -237,182 +239,181 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/redis中String类型过期时间的一个坑/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="行痴">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/my_girlfriend.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="乐乐熊的小站">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">redis中String类型过期时间的一个坑</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T17:30:25+08:00">
+                2019-08-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/02/redis中String类型过期时间的一个坑/" itemprop="url">
-              
-                <span itemprop="name">redis中String类型过期时间的一个坑</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T17:30:25+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/31/redis存储结构hash还是String/" itemprop="url">
-              
-                <span itemprop="name">redis存储结构hash与String的选择问题</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T20:08:20+08:00" content="2019-07-31">
-          07-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/29/Git使用心得（一）/" itemprop="url">
-              
-                <span itemprop="name">Git使用心得（一）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-29T15:46:54+08:00" content="2019-07-29">
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
+            
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/01/My-First-Blog/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">My First Blog</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  121 字
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-01T11:26:14+08:00" content="2018-11-01">
-          11-01
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1  分钟
+                </span>
+              
+            </div>
+          
 
+          
 
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>​    redis的String数据类型有一个需要特别注意的地方是如果一个字符串已经设置了过期时间，然后你调用了 set 方法修改了它的值，它的过期时间会消失！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set name chixixiang</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; expire name 600</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; ttl name</span><br><span class="line">(integer) 596</span><br><span class="line">127.0.0.1:6379&gt; set name Harden</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; ttl name</span><br><span class="line">(integer) -1</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/31/redis存储结构hash还是String/" rel="next" title="redis存储结构hash与String的选择问题">
+                <i class="fa fa-chevron-left"></i> redis存储结构hash与String的选择问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -420,6 +421,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -637,6 +642,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
