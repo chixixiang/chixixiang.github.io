@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="包月日志格式如下： 包月日志格式如下： 10.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|{“userGuid”:1305741672,”isFirstDeposit”:2,”openWay”:2,”channelId”:100000013,”platform”:1,”number”:12,”days">
+<meta name="description" content="包月日志格式如下： 110.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|&amp;#123;&amp;quot;userGuid&amp;quot;:1305741672,&amp;quot;isFirstDeposit&amp;quot;:2,&amp;quot;openWay&amp;quot;:2,&amp;quot;channelId&amp;quot;:1000">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次awk日志处理">
 <meta property="og:url" content="http://yoursite.com/2019/08/07/记一次awk日志处理/index.html">
 <meta property="og:site_name" content="乐乐熊的小站">
-<meta property="og:description" content="包月日志格式如下： 包月日志格式如下： 10.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|{“userGuid”:1305741672,”isFirstDeposit”:2,”openWay”:2,”channelId”:100000013,”platform”:1,”number”:12,”days">
+<meta property="og:description" content="包月日志格式如下： 110.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|&amp;#123;&amp;quot;userGuid&amp;quot;:1305741672,&amp;quot;isFirstDeposit&amp;quot;:2,&amp;quot;openWay&amp;quot;:2,&amp;quot;channelId&amp;quot;:1000">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-07T12:21:50.547Z">
+<meta property="og:updated_time" content="2019-08-12T09:28:01.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次awk日志处理">
-<meta name="twitter:description" content="包月日志格式如下： 包月日志格式如下： 10.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|{“userGuid”:1305741672,”isFirstDeposit”:2,”openWay”:2,”channelId”:100000013,”platform”:1,”number”:12,”days">
+<meta name="twitter:description" content="包月日志格式如下： 110.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|&amp;#123;&amp;quot;userGuid&amp;quot;:1305741672,&amp;quot;isFirstDeposit&amp;quot;:2,&amp;quot;openWay&amp;quot;:2,&amp;quot;channelId&amp;quot;:1000">
 
 
 
@@ -314,7 +314,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  224 字
+                  233 字
                 </span>
               
 
@@ -354,28 +354,31 @@
 
       
         <p>包月日志格式如下：</p>
-<p>包月日志格式如下：</p>
-<p>10.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|{“userGuid”:1305741672,”isFirstDeposit”:2,”openWay”:2,”channelId”:100000013,”platform”:1,”number”:12,”days”:372,”timestamp”:1541952006,”extMap”:{“jailBreak”:”0”,”autoKeep”:”0”}}|true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10.58.130.67 2019-7-12 00:00:06.8 INFO 10.58.130.67|openMonthAndMarketing|&#123;&quot;userGuid&quot;:1305741672,&quot;isFirstDeposit&quot;:2,&quot;openWay&quot;:2,&quot;channelId&quot;:100000013,&quot;platform&quot;:1,&quot;number&quot;:12,&quot;days&quot;:372,&quot;timestamp&quot;:1541952006,&quot;extMap&quot;:&#123;&quot;jailBreak&quot;:&quot;0&quot;,&quot;autoKeep&quot;:&quot;0&quot;&#125;&#125;|true</span><br></pre></td></tr></table></figure>
 <p>条件：</p>
 <p>时间：开通时间为7月12日凌晨到08:21之间</p>
 <p>平台：安卓+ios</p>
 <p>开通类型：首开+非首开</p>
-<p>输出格式：账号、平台、开通时间</p>
 <ul>
-<li>cat info_remote.log.2019-7-12|grep ‘openMonthAndMarketing’ | awk ‘$3&lt;”08:22”‘ | awk -F ‘|’ ‘$NF==”true”‘ |grep ‘“number”:12,’ | grep ‘“platform”:[13]’ &gt; open_0712_20190805</li>
+<li>输出格式：账号、平台、开通时间</li>
 </ul>
-<p>处理日志成按空格分隔</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;cat info_remote.log.2019-7-12|grep &apos;openMonthAndMarketing&apos; | awk &apos;$3&lt;&quot;08:22&quot;&apos; | awk -F &apos;|&apos; &apos;$NF==&quot;true&quot;&apos; |grep &apos;&quot;number&quot;:12,&apos; | grep &apos;&quot;platform&quot;:[13]&apos; &gt; open_0712_20190805</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>cat open_0712_20190805|sed ‘s/:/ /g’ |sed ‘s/,/ /g’ |less</p>
-<p>10.58.130.67 2019-7-12 00 00 06.8 INFO 10.58.130.67|openMonthAndMarketing|{“userGuid” 1305741672 “isFirstDeposit” 2 “openWay” 2 “channelId” 100000013 “platform” 1 “number” 12 “days” 372 “timestamp” 1541952006 “extMap” {“jailBreak” “0” “autoKeep” “0”}}|true</p>
-</li>
+<li>处理日志成按空格分隔</li>
 </ul>
-<p>按照逗号方式输出到csv文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;cat open_0712_20190805|sed &apos;s/:/ /g&apos; |sed &apos;s/,/ /g&apos; |less</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>cat open_0712_20190805|sed ‘s/:/ /g’ |sed ‘s/,/ /g’|awk ‘{print $8”,”$16”,”$2” “$3”:”$4”:”$5}’&gt;open_month_12_20190805.csv</p>
-<p>输出格式：1305741672,1,2018-11-12 00:00:06.8</p>
-</li>
+<li>此时日志格式如下</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10.58.130.67 2019-7-12 00 00 06.8 INFO 10.58.130.67|openMonthAndMarketing|&#123;&quot;userGuid&quot; 1305741672 &quot;isFirstDeposit&quot; 2 &quot;openWay&quot; 2 &quot;channelId&quot; 100000013 &quot;platform&quot; 1 &quot;number&quot; 12 &quot;days&quot; 372 &quot;timestamp&quot; 1541952006 &quot;extMap&quot; &#123;&quot;jailBreak&quot; &quot;0&quot; &quot;autoKeep&quot; &quot;0&quot;&#125;&#125;|true</span><br></pre></td></tr></table></figure>
+<ul>
+<li>按照逗号方式输出到csv文件中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat open_0712_20190805|sed &apos;s/:/ /g&apos; |sed &apos;s/,/ /g&apos;|awk &apos;&#123;print $8&quot;,&quot;$16&quot;,&quot;$2&quot; &quot;$3&quot;:&quot;$4&quot;:&quot;$5&#125;&apos;&gt;open_month_12_20190805.csv</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最终输出格式为</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1305741672,1,2018-11-12 00:00:06.8</span><br></pre></td></tr></table></figure>
 
       
     </div>
